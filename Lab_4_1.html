@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif; /* Times New Roman для всех элементов */
+        }
+        
+        body {
+            padding: 10px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background: white;
+        }
+
+        .container {
+            position: relative;
+            width: 336px;
+            height: 640px;
+            border: none;
+            background: white;
+            padding: 15px;
+            margin-left: 10px;
+        }
+
+        .box {
+            border: none;
+            display: flex;
+            font-weight: bold;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        .box-static {
+            background: #add8e6;
+            margin-bottom: 8px;
+            width: 60px;
+            height: 60px;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .box-relative-1 {
+            position: relative;
+            background: #90ee90;
+            left: 15px;
+            margin-bottom: 12px;
+            width: 84px;
+            height: 84px;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            z-index: 1;
+        }
+
+        .box-relative-2 {
+            position: relative;
+            background: #ffc0cb;
+            left: 28px;
+            top: -48px;
+            margin-bottom: 12px;
+            width: 96px;
+            height: 96px;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            z-index: 2;
+        }
+
+        .box-absolute-1 {
+            position: absolute;
+            background: #ff7f50;
+            top: 344px;
+            left: 56px;
+            width: 94px;
+            height: 94px;
+            z-index: 7;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .box-absolute-2 {
+            position: absolute;
+            background: #87ceeb;
+            top: 369px;
+            left: 80px;
+            width: 113px;
+            height: 113px;
+            z-index: 4;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .box-absolute-3 {
+            position: absolute;
+            background: #8e44ad;
+            top: 393px;
+            left: 90px;
+            width: 146px;
+            height: 146px;
+            z-index: 3;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .box-absolute-4 {
+            position: absolute;
+            background: #d3d3d3;
+            top: 320px;
+            left: 40px;
+            width: 276px;
+            height: 276px;
+            z-index: 2;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .box-zindex-1 {
+            position: absolute;
+            top: 50px;
+            right: 60px;
+            background: #f08080;
+            width: 108px;
+            height: 108px;
+            border: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 3px;
+            font-weight: bold;
+            font-size: 10px;
+            z-index: 10;
+        }
+
+        .box-zindex-2 {
+            position: absolute;
+            top: 88px;
+            left: 180px;
+            background: #20b2aa;
+            width: 120px;
+            height: 120px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 3;
+            color: transparent;
+        }
+
+        /* Фиксированные блоки */
+        .box-fixed-1 {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ffff00;
+            width: 60px;
+            height: 60px;
+            z-index: 1;
+            padding: 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            font-size: 10px;
+        }
+
+        .box-fixed-2 {
+            position: absolute;
+            bottom: 34px;
+            left: 30px;
+            background: #ffa500;
+            color: black;
+            width: 83px;
+            height: 83px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 3px;
+            align-items: flex-start;
+            z-index: 10;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Статические блоки -->
+        <div class="box box-static">Static</div>
+        <div class="box box-static">Static</div>
+        
+        <!-- Относительные блоки -->
+        <div class="box box-relative-1">Relative 1</div>
+        <div class="box box-relative-2">Relative 2</div>
+        
+        <!-- Абсолютные блоки с наслоением -->
+        <div class="box box-absolute-4"></div>
+        <div class="box box-absolute-3"></div>
+        <div class="box box-absolute-2"></div>
+        <div class="box box-absolute-1">Absolute 1</div>
+        
+        <!-- Z-Index блоки -->
+        <div class="box-zindex-1">Z-Index 5</div>
+        <div class="box-zindex-2">Z-Index 4</div>
+        
+        <!-- Фиксированные блоки -->
+        <div class="box box-fixed-1">Fixed Top-Right</div>
+        <div class="box box-fixed-2">Fixed Bottom-Left</div>
+    </div>
+</body>
+</html>
